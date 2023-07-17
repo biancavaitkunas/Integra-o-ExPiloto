@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
+
+.container {
+    width: 850px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Century Gothic";
+    background-color: #f0ebbf;
+    border-radius: 5px;
+    box-shadow: 2px 0px 1.5px 0px #bebbbb;
+    margin-top: 150px;
+}
+
+h1{
+    margin-top: 35px;
+    align-self: center;
+    color: #718a44;
+}
+
+.form{
+    margin-top: 30px;
+}
+
+.name{
+    display: flex;
+}
+
+.salvar {
+    margin-top: 15px;
+    display: block;
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-color: #9fb773;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    font-family: inherit;
+    font-size: 20px;
+    font-family: "Century Gothic";
+    border-radius: 6px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.filtrar{
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 4px;
+    background-color: #8ba161;
+    color: #fff;
+    font-family: "Century Gothic";
+    font-size: 15px;
+
+}
+
+button:hover{
+    background-color: #4d7541;
+    transition: all 0.3s;
+}
+
+.input {
+    font-size: 15px;
+    font-family: inherit;
+    padding: 4px 15px;
+    border-radius: 4px;
+    border: 1px #f2f2f2 solid;
+    background: #fdfdfd;
+    outline: none;
+    width: 50%;
+    transition: all 0.3s;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 15%;
+}
+
+.valor {
+    width: 60%;
+}
+
+.radio-label{
+    color: #44581f;
+    margin-right: 35px;
+
+}
+
+.label{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 15%;
+    color: #44581f
+}

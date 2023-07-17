@@ -1,0 +1,25 @@
+<div class="container">
+    <table>
+  
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Permissão</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users, let i = index">
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.roles}}</td>
+          <td>
+            <button class="carregar">Editar</button>
+            <button class="carregar" (click)="deleteUser(i)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+  
+    </table>
+  </div>

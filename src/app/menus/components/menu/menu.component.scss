@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
+
+.header {
+  background-color: #8ba161;
+  color: white;
+  font-size: larger;
+  text-align: center;
+  padding: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Century Gothic', sans-serif;
+  margin-bottom: 50px;
+}
+
+.sidebar {
+    width: 180px;
+    height: 100vh;
+    background-color: rgb(248, 246, 246);
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 110px;
+    font-family: 'Century Gothic', sans-serif;
+  }
+  
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 130px;
+  }
+  
+  .sidebar ul li {
+    padding: 0px;
+    position: relative;
+    background-color: #f0ebbf;
+  }
+  
+  li ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+    }
+  
+  .content {
+    margin-left: 200px;
+    margin-top: 60px;
+    padding: 20px;
+  }
+  
+  .linkSelected {
+    font-weight: bold;
+    background-color: #85a791;
+  }
+  
+  .sidebar ul li a {
+    display: block;
+    width: calc(100% - 20px);
+    height: 100hv;
+    text-decoration: none;
+  }
+  
+  a:link,
+  a:visited {
+    background-color: #f0ebbf;
+    color: rgb(2, 2, 2);
+    padding: 10px 35px;
+    text-align: center;
+    width: 100%;  
+  }
+  
+  a:hover,
+  a:active, a.linkSelected   {
+    background-color: #85a791;
+    transform: scale(1.03);
+  }

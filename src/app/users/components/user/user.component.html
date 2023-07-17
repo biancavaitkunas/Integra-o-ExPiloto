@@ -1,0 +1,77 @@
+<div class="container">
+
+  <h1>Cadastro de Usuários</h1>
+
+  <div class="form">
+    <label class="label">Nome: </label>
+    <div class="name">
+      <input
+        type="text"
+        #inputName
+        class="input"
+        placeholder="Digite seu nome..."
+        [(ngModel)]="user.name"
+      />
+      <button class="filtrar" (click)="getUserByName()">Filtrar</button>
+    </div>
+  
+    <label class="label">E-mail: </label>
+    <input
+      type="text"
+      #inputEmail
+      class="input valor"
+      placeholder="Digite seu e-mail..."
+      [(ngModel)]="user.email"
+    />
+  
+    <label class="label">Senha: </label>
+    <input
+      type="text"
+      #inputPassword
+      class="input valor"
+      placeholder="Digite sua senha..."
+      [(ngModel)]="user.password"
+    />
+  
+    <div class="radios">
+      <input
+        class="label"
+        type="radio"
+        #inputRoles
+        value="ADM"
+        name="permissao"
+        [(ngModel)]="user.roles"
+      />
+      <label class="radio-label">ADM</label>
+  
+      <input
+        class="form-check-input"
+        #inputRoles
+        type="radio"
+        value="USER"
+        name="permissao"
+        [(ngModel)]="user.roles"
+      />
+      <label class="radio-label">User</label>
+    </div>
+  
+    <button
+      (click)="
+        submitUser(
+          inputName.value,
+          inputEmail.value,
+          inputPassword.value,
+          inputRoles.value
+        )
+      "
+      class="salvar"
+    >
+      Salvar
+    </button>
+  </div>
+  
+
+  <app-tabela></app-tabela>
+</div>
+
+<!--<button (click)="getUser()">Listar Users na console</button>-->

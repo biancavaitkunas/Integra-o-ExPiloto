@@ -1,0 +1,33 @@
+.container{
+    width: 660px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: #9fb773;
+    box-shadow: 2px 0px 1.5px 0px #bebbbb;
+    border-radius: 3px;
+    padding: 1em;
+    border-top: 25px;
+    margin-top: 40px;
+    font-family: "Century Gothic";
+    color: white
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.carregar{
+    background-color: #8ba161;
+    color: #fff;
+    font-family: inherit;
+    border-radius: 6px;
+    margin: 20px auto;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
