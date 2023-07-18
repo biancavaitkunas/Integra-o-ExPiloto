@@ -1,0 +1,33 @@
+<section>
+
+    <div class="form">
+      <label class="label">Nome: </label>
+      <div class="name">
+        <input
+          type="text"
+          class="input"
+          placeholder="Digite o nome do campeonato..."
+          [(ngModel)]="championship.description"
+        />
+        
+        <button class="filtrar" (click)="getChampionshipByName()"class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+
+      <label class="label">Ano: </label>
+      <div class="name">
+        <input
+          type="text"
+          class="input"
+          placeholder="Digite o ano do campeonato..."
+          [(ngModel)]="championship.year"
+        />
+        
+        <button class="filtrar" (click)="getChampionshipByYear()"class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+    
+      </div>
+    
+      <button class="salvar" (click)="insert()">Salvar</button>
+
+<app-tabela></app-tabela>
+</section>

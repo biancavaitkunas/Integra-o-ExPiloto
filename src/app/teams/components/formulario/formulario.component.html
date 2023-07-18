@@ -1,4 +1,22 @@
 <section>
 
-    <app-tabela></app-tabela>
+    <div class="form">
+      <label class="label">Nome: </label>
+      <div class="name">
+        <input
+          type="text"
+          #inputName
+          class="input"
+          placeholder="Digite o nome da equipe..."
+          [(ngModel)]="team.name"
+        />
+        <button class="filtrar" (click)="getTeamByName()"class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+    
+      </div>
+    
+      <button class="salvar" (click)="insert()">Salvar</button>
+
+<app-tabela></app-tabela>
 </section>
+

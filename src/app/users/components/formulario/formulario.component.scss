@@ -6,16 +6,10 @@
     display: flex;
     flex-direction: column;
     font-family: "Century Gothic";
-    background-color: #f0ebbf;
+    background-color: #faf6d1;
     border-radius: 5px;
     box-shadow: 2px 0px 1.5px 0px #bebbbb;
     margin-top: 150px;
-}
-
-h1{
-    margin-top: 35px;
-    align-self: center;
-    color: #718a44;
 }
 
 .form{
@@ -26,15 +20,31 @@ h1{
     display: flex;
 }
 
+.alterar-senha {
+    display: block;
+    padding: 3px 15px;
+    border: none;
+    outline: none;
+    background-color: #9fb773;
+    color: #fff;
+    font-family: inherit;
+    font-size: 15px;
+    font-family: "Century Gothic";
+    border-radius: 6px;
+    margin: 20px auto;
+    margin-left: 62%;
+    cursor: pointer;
+}
+
 .salvar {
-    margin-top: 15px;
+    margin-top: 100px;
     display: block;
     padding: 5px 30px;
     border: none;
     outline: none;
     background-color: #9fb773;
     color: #fff;
-    text-shadow: 0 0 5px rgb(0, 0, 0);
+    text-shadow: 0 0 3px rgb(0, 0, 0);
     font-family: inherit;
     font-size: 20px;
     font-family: "Century Gothic";
@@ -43,22 +53,8 @@ h1{
     cursor: pointer;
 }
 
-.filtrar{
-    border: none;
-    outline: none;
-    width: 60px;
-    height: 30px;
-    margin-top: 5px;
-    border-radius: 4px;
-    background-color: #8ba161;
-    color: #fff;
-    font-family: "Century Gothic";
-    font-size: 15px;
-
-}
-
-button:hover{
-    background-color: #4d7541;
+.salvar:hover{
+    background-color: #44581f;
     transition: all 0.3s;
 }
 
@@ -82,6 +78,11 @@ button:hover{
     width: 60%;
 }
 
+.radios{
+    margin-top: -60px;
+    margin-bottom: 40px;
+}
+
 .radio-label{
     color: #44581f;
     margin-right: 35px;
@@ -90,7 +91,62 @@ button:hover{
 
 .label{
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 15%;
-    color: #44581f
+    color: #44581f;
 }
+
+.icone{
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.icone:hover{
+    
+}
+
+.linha{
+    background-color: #b5cc8b;
+    height: 1px;
+    width: 700px;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.linha2{
+    background-color: #b5cc8b;
+    height: 0.5px;
+    width: 550px;
+    margin-left: 14%;
+    margin-top: 15px;
+}
+
+.header{
+    display: flex;
+    margin-left: 13%;
+    margin-top: 20px;
+    
+}
+
+.imagem{
+    width: 70px;
+    height: 70px;
+    margin-right: 90px;
+}
+
+h1{
+    align-self: center;
+    color: #718a44;
+    text-shadow: 1px 1px 1px rgba(138, 145, 144, 0.5);
+    font-size: 27px;
+}
+
+/*.box-alterar-senha{
+    background-color: #b5cc8b;
+    width: 400px;
+    margin-left: 110%;
+}*/

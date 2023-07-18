@@ -1,66 +1,47 @@
 <div class="container">
 
+  <div class="header">
+    <img src="../../../../assets/usuario.png" class="imagem">
     <h1>Cadastro de Usuários</h1>
-  
-    <div class="form">
-      <label class="label">Nome: </label>
-      <div class="name">
-        <input
-          type="text"
-          #inputName
-          class="input"
-          placeholder="Digite seu nome..."
-          [(ngModel)]="user.name"
-        />
-        <button class="filtrar" (click)="getUserByName()">Filtrar</button>
-      </div>
-    
-      <label class="label">E-mail: </label>
-      <input
-        type="text"
-        #inputEmail
-        class="input valor"
-        placeholder="Digite seu e-mail..."
-        [(ngModel)]="user.email"
-      />
-    
-      <label class="label">Senha: </label>
-      <input
-        type="text"
-        #inputPassword
-        class="input valor"
-        placeholder="Digite sua senha..."
-        [(ngModel)]="user.password"
-      />
-    
-      <div class="radios">
-        <input
-          class="label"
-          type="radio"
-          #inputRoles
-          value="ADMIN, USER"
-          name="permissao"
-          [(ngModel)]="user.roles"
-        />
-        <label class="radio-label">ADM</label>
-    
-        <input
-          class="form-check-input"
-          #inputRoles
-          type="radio"
-          value="USER"
-          name="permissao"
-          [(ngModel)]="user.roles"
-        />
-        <label class="radio-label">User</label>
-      </div>
-    
-      <button class="salvar" (click)="insert()">Salvar</button>
-    </div>
-    
-  
-    <app-tabela></app-tabela>
   </div>
-  
-  <!--<button (click)="getUser()">Listar Users na console</button>-->
-  
+
+  <div class="linha"></div>
+
+  <div class="form">
+    <label class="label">Nome: </label>
+    <div class="name">
+      <input type="text" #inputName class="input" placeholder="Digite seu nome..." [(ngModel)]="user.name" />
+      <button (click)="getUserByName()" class="icone"><img src="../../../../assets/icone-lupa.svg" alt=""
+          width="35px"></button>
+    </div>
+
+    <label class="label">E-mail: </label>
+    <input type="text" #inputEmail class="input valor" placeholder="Digite seu e-mail..." [(ngModel)]="user.email" />
+
+    <button class="alterar-senha">Alterar Senha</button>
+
+    <div class="radios">
+      <input class="label" type="radio" #inputRoles value="ADMIN, USER" name="permissao" [(ngModel)]="user.roles" />
+      <label class="radio-label">ADM</label>
+
+      <input class="form-check-input" #inputRoles type="radio" value="USER" name="permissao" [(ngModel)]="user.roles" />
+      <label class="radio-label">User</label>
+    </div>
+
+    <div class="linha2"></div>
+
+    <button class="salvar" (click)="insert()">Salvar</button>
+  </div>
+
+  <div class="box-alterar-senha">
+    <h2>Altere sua senha</h2>
+
+  </div>
+
+
+  <app-tabela></app-tabela>
+</div>
+
+<!--<label class="label">Senha: </label>
+    <input type="text" #inputPassword class="input valor" placeholder="Digite sua senha..."
+      [(ngModel)]="user.password" />-->

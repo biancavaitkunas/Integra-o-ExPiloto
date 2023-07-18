@@ -1,0 +1,30 @@
+.container{
+    width: 660px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 2px 0px 1.5px 0px #bebbbb;
+    border-radius: 3px;
+    padding: 1em;
+    border-top: 25px;
+    margin-top: 40px;
+    font-family: "Century Gothic";
+    color: white;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #5d9267;
+}
+
+.icone{
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}

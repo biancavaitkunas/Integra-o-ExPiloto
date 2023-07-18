@@ -1,0 +1,23 @@
+<div class="container">
+    <table>
+  
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Ano</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let championship of championships">
+          <td>{{championship.description}}</td>
+          <td>{{championship.year}}</td>
+          <td>
+            <button class="icone" (click)="editChampionship(championship)"><img src="../../../../assets/editar.svg" width="35px"></button>
+            <button class="icone" (click)="deleteChampionship(championship)"><img src="../../../../assets/deletar.svg" width="35px"></button>
+          </td>
+        </tr>
+      </tbody>
+  
+    </table>
+  </div>

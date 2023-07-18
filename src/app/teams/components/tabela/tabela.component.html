@@ -1,1 +1,22 @@
-<p>tabela works!</p>
+<div class="container">
+    <table>
+  
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let team of teams">
+          <td>{{team.name}}</td>
+          <td>
+            <button class="icone" (click)="editTeam(team)"><img src="../../../../assets/editar.svg" width="35px"></button>
+            <button class="icone" (click)="deleteTeam(team)"><img src="../../../../assets/deletar.svg" width="35px"></button>
+          </td>
+        </tr>
+      </tbody>
+  
+    </table>
+  </div>
+

@@ -11,10 +11,11 @@ import { MenusModule } from './menus/menus.module';
 import { CountriesModule } from './countries/countries.module';
 import { TeamsComponent } from './teams/components/teams/teams.component';
 import { TeamsModule } from './teams/teams.module';
+import { ChampionshipModule } from './championship/championship.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, UsersModule, HomeModule, HttpClientModule, MenusModule, CountriesModule, TeamsModule],
+  imports: [BrowserModule, AppRoutingModule, UsersModule, HomeModule, HttpClientModule, MenusModule, CountriesModule, TeamsModule, ChampionshipModule],
   providers: [],
   bootstrap: [AppComponent],
 })

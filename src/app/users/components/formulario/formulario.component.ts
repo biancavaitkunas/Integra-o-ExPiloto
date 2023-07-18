@@ -12,7 +12,6 @@ export class FormularioComponent implements OnInit{
   public emitEventUser = new EventEmitter();
 
   public users!: User[];
-  //public users: any= {}
 
   public user = {} as User
 
