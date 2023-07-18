@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserComponent } from './components/user/user.component';
-import { TabelaComponent } from './components/tabela/tabela.component';
-import { FormsModule } from '@angular/forms';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { TabelaComponent } from './components/tabela/tabela.component';
+import { TeamsComponent } from './components/teams/teams.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    UserComponent,
+    FormularioComponent,
     TabelaComponent,
-    FormularioComponent
+    TeamsComponent
   ],
   imports: [
     CommonModule, FormsModule
   ],
-  exports: [UserComponent]
+  exports: [TeamsComponent]
 })
-export class UsersModule { }
+export class TeamsModule { }

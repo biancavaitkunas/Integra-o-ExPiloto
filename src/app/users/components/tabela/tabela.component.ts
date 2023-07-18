@@ -13,10 +13,12 @@ export class TabelaComponent implements OnInit{
 
   public users!: User[]
 
-  //public usersList: Array<User> = [];
+  public deleteUser(event: User){
+    this.service.deleteUser(event).subscribe(() => this.service.getUsers().subscribe((data) => this.users = data));
+  }
 
-  public deleteUser(event: number){
-    this.service.deleteUser(event);
+  public editUser(user: User){
+    this.service.editUser(user);
   }
 
   ngOnInit(): void {

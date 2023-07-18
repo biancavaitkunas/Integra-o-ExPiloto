@@ -1,0 +1,22 @@
+<div class="container">
+    <table>
+  
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let country of countries">
+          <td>{{country.name}}</td>
+          <td>
+            <button class="carregar" (click)="editCountry(country)">Editar</button>
+            <button class="carregar" (click)="deleteCountry(country)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+  
+    </table>
+  </div>
+

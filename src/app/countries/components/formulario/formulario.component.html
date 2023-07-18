@@ -1,0 +1,21 @@
+<section>
+
+        <div class="form">
+          <label class="label">Nome: </label>
+          <div class="name">
+            <input
+              type="text"
+              #inputName
+              class="input"
+              placeholder="Digite o nome do país..."
+              [(ngModel)]="country.name"
+            />
+            <button class="filtrar" (click)="getCountryByName()">Filtrar</button>
+          </div>
+        
+          </div>
+        
+          <button class="salvar" (click)="insert()">Salvar</button>
+
+    <app-tabela></app-tabela>
+</section>
