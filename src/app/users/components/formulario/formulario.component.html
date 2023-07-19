@@ -18,6 +18,10 @@
     <label class="label">E-mail: </label>
     <input type="text" #inputEmail class="input valor" placeholder="Digite seu e-mail..." [(ngModel)]="user.email" />
 
+    <label class="label">Senha: </label>
+    <input type="text" #inputPassword class="input valor" placeholder="Digite sua senha..."
+      [(ngModel)]="user.password" />
+
     <button class="alterar-senha">Alterar Senha</button>
 
     <div class="radios">
@@ -33,10 +37,12 @@
     <button class="salvar" (click)="insert()">Salvar</button>
   </div>
 
-  <div class="box-alterar-senha">
+  
+
+ <!--<div class="box-alterar-senha">
     <h2>Altere sua senha</h2>
 
-  </div>
+  </div>-->
 
 
   <app-tabela></app-tabela>

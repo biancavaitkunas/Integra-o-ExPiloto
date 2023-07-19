@@ -1,0 +1,42 @@
+<section>
+
+    <div class="form">
+      <label class="label">Nome: </label>
+      <div class="name">
+        <input
+          type="text"
+          class="input"
+          placeholder="Digite o nome da pista..."
+        />
+        <button class="filtrar" class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+
+      <label class="label">Tamanho: </label>
+      <div class="name">
+        <input
+          type="number"
+          class="input"
+          placeholder="Digite o tamanho da pista..."
+        />
+        <button class="filtrar" class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+
+      <label class="label">País: </label>
+      <div class="name">
+        <select class="input" placeholder="Digite o tamanho da pista...">
+          <option *ngFor="let pais of countries" value="pais.id" [(ngModel)]="countrySelected">{{pais.name}}</option>
+        </select>
+        <button class="filtrar" class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+    
+      </div>
+    
+      <div class="botoes">
+        <button class="botao" (click)="insert()">Salvar</button>
+        <button class="botao">Ver filtros</button>
+      </div>
+      
+
+
+</section>
+

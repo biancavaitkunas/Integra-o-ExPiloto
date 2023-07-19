@@ -15,17 +15,21 @@ export class CountryServiceService {
 
   constructor(private http: HttpClient) {}
 
+  public countriesList!: Country[];
+
   public urlBase = `http://localhost:8080/pais`;
   private countriesSubject = new Subject<Country[]>();
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),}; //diz que o tipo será json, content type fica dentro de headers no postman
 
   public insert(country: Country): Observable<Country> {
+    //this.countriesList.push(country);
     return this.http.post<Country>(this.urlBase, JSON.stringify(country), this.httpOptions).pipe(
         tap(() => {
           this.getCountries();
         })
       );
+     
   }
 
   getCountries(): Observable<Country[]> {

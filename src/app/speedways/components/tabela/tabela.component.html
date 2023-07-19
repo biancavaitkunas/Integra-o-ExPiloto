@@ -1,0 +1,27 @@
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Tamanho</th>
+        <th>País</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pista of speedways">
+        <td>{{pista.name}}</td>
+        <td>{{pista.size}}</td>
+        <td>{{pista.country.name}}</td>
+        <td>
+          <button class="icone" >
+            <img src="../../../../assets/editar.svg" width="35px" />
+          </button>
+          <button class="icone">
+            <img src="../../../../assets/deletar.svg" width="35px" />
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

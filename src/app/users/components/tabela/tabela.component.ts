@@ -5,24 +5,33 @@ import { UserServiceService } from '../../services/user-service.service';
 @Component({
   selector: 'app-tabela',
   templateUrl: './tabela.component.html',
-  styleUrls: ['./tabela.component.scss']
+  styleUrls: ['./tabela.component.scss'],
 })
-export class TabelaComponent implements OnInit{
+export class TabelaComponent implements OnInit {
+  constructor(private service: UserServiceService) {}
 
-  constructor(private service: UserServiceService){}
+  public users!: User[];
+  public token: string = 'Bearer ';
 
-  public users!: User[]
-
-  public deleteUser(event: User){
-    this.service.deleteUser(event).subscribe(() => this.service.getUsers().subscribe((data) => this.users = data));
+  public deleteUser(event: User) {
+    this.service
+      .deleteUser(event)
+      .subscribe(() =>
+        this.service.getUsers().subscribe((data) => (this.users = data))
+      );
   }
 
-  public editUser(user: User){
+  public editUser(user: User) {
     this.service.editUser(user);
   }
 
   ngOnInit(): void {
-    this.service.getUsers().subscribe((data) => {this.users = data})
+    this.service.getToken().subscribe((data) => {
+      this.token += data;
+      console.log(data);
+    });
+    this.service.getUsers().subscribe((data) => {
+      this.users = data;
+    });
   }
-
 }
