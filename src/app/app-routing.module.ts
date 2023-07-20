@@ -6,9 +6,11 @@ import { CountriesComponent } from './countries/components/countries/countries.c
 import { TeamsComponent } from './teams/components/teams/teams.component';
 import { ChampionshipComponent } from './championship/components/championship/championship.component';
 import { SpeedwaysComponent } from './speedways/components/speedways/speedways.component';
+import { LoginComponent } from './login/components/login/login.component';
 
 const routes: Routes = [
   {path:"", component: HomePagesComponent},
+  {path:"login", component: LoginComponent},
   {path:"users", component: UserComponent},
   {path:"countries", component: CountriesComponent},
   {path:"teams", component: TeamsComponent},

@@ -1,6 +1,7 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { APP_INITIALIZER, Component, EventEmitter, OnInit } from '@angular/core';
 import { User } from '../../models/user';
 import { UserServiceService } from '../../services/user-service.service';
+import { LoginServiceService } from 'src/app/login/services/login-service.service';
 
 @Component({
   selector: 'app-formulario',
@@ -15,7 +16,7 @@ export class FormularioComponent implements OnInit{
 
   public user = {} as User
 
-  constructor(private service: UserServiceService){}
+  constructor(private service: UserServiceService, private loginService: LoginServiceService){}
   
   public getUser(){
     this.service.getUsers().subscribe((data) => {this.users = data});
@@ -34,9 +35,11 @@ export class FormularioComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.service.emitEventUser.subscribe((data) => {this.user = data})
+    //this.service.emitEventUser.subscribe((data) => {this.user = data})
+    this.loginService.getToken("usuario3@gmail.com", "senha").subscribe(()=> this.service.getUsers().subscribe((data)=> {this.users = data}))
+    }
   }
 
   
 
-}
+
