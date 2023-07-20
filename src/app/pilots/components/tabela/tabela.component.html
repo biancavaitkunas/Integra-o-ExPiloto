@@ -1,0 +1,27 @@
+<div class="container">
+    <table>
+      <thead>
+        <tr>
+            <th>Nome</th>
+            <th>País</th>
+            <th>Equipe</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pilot of pilots">
+            <td>{{pilot.name}}</td>
+            <td>{{pilot.country.name}}</td>
+            <td>{{pilot.team.name}}</td>
+          <td>
+            <button class="icone" >
+              <img src="../../../../assets/editar.svg" width="35px" />
+            </button>
+            <button class="icone">
+              <img src="../../../../assets/deletar.svg" width="35px" />
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

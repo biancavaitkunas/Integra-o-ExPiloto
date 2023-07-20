@@ -21,14 +21,14 @@ export class UserServiceService {
 
   /*private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-  };*/ //diz que o tipo será json, content type fica dentro de headers no postman
+    responseType: 'text' as 'json',
+  };//diz que o tipo será json, content type fica dentro de headers no postman*/
 
   private httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-    responseType: 'text' as 'json',
-  };
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };//diz que o tipo será json, content type fica dentro de headers no postman
 
-  public insert(user: User, token: string): Observable<User> {
+  public insert(user: User): Observable<User> {
     return this.http
       .post<User>(this.urlBase, JSON.stringify(user), this.httpOptions)
       .pipe(
@@ -38,23 +38,11 @@ export class UserServiceService {
       );
   }
 
-  private getToken() {
-    this.globalService.getToken("usuario4@gmail.com", "senha");
-    console.log(this.globalService.token)
-  }
+  
 
-  getUsers(): Observable<User[]> {
-
-    //getToken(.subscribe)
-    this.getToken();
-    let httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': this.globalService.token
-      }),
-    };
+  public getUsers(): Observable<User[]> {
     this.http
-      .get<User[]>(this.urlBase, httpOptions)
+      .get<User[]>(this.urlBase)
       .subscribe((users) => this.usersSubject.next(users));
     return this.usersSubject.asObservable();
   }
@@ -74,4 +62,9 @@ export class UserServiceService {
   public editUser(user: User) {
     this.emitEventUser.emit(user);
   }
+
+  /*private getToken() {
+    this.globalService.getToken("usuario4@gmail.com", "senha");
+    console.log(this.globalService.token)
+  }*/
 }

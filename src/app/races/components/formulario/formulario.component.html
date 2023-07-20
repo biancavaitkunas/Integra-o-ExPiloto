@@ -1,0 +1,48 @@
+<section>
+
+    <div class="form">
+      <label class="label">Data: </label>
+      <div class="name">
+        <input
+          type="date"
+          class="input"
+          placeholder="Digite o nome da pista..."
+        />
+        <button class="filtrar" class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+
+      <label class="label">Pista: </label>
+      <div class="name" >
+        <select class="input" placeholder="Selecione a pista...">
+          <option *ngFor="let speedway of speedways" [value]="speedway.id" >{{speedway.name}}</option>
+        </select>
+        <button class="filtrar" class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+    
+
+
+      <label class="label">Campeonato: </label>
+      <div class="name" >
+        <select class="input" placeholder="Selecione o campeonato">
+          <option *ngFor="let championship of championships" [value]="championship.id" >{{championship.description}}</option>
+        </select>
+        <button class="filtrar" class="icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+    
+      </div>
+    
+      <div class="botoes">
+        <button class="botao" (click)="insert()">Salvar</button>
+        <button class="botao">Ver filtros</button>
+      </div>
+
+      <label class="label">Filtrar por tamanho: </label>
+      <div class="name size-goup">
+        <input type="number" class="input size" placeholder="Min"/>
+        <input type="number" class="input size" placeholder="Max"/>
+        <button class="filtrar" class="icone size-icone"><img src="../../../../assets/icone-lupa.svg" alt="" width="35px"></button>
+      </div>
+      
+
+
+</section>

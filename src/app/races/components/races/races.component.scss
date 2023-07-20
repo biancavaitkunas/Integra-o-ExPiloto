@@ -1,0 +1,51 @@
+.container {
+    width: 1070px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Century Gothic";
+    background-color: #faf6d1;
+    border-radius: 5px;
+    box-shadow: 2px 0px 1.5px 0px #bebbbb;
+    margin-top: 150px;
+    margin-left: 15%;
+    
+}
+
+.form{
+    margin-left: -12%
+}
+
+.table{
+    margin-left: 45%;
+    margin-top: -320px;
+}
+
+.linha{
+    background-color: #b5cc8b;
+    height: 1px;
+    width: 1000px;
+    margin-left: 14%;
+    margin-top: 15px;
+}
+
+.header{
+    display: flex;
+    margin-left: 30%;
+    margin-top: 20px;
+    
+}
+
+.imagem{
+    width: 70px;
+    height: 70px;
+    margin-right: 40px;
+}
+
+h1{
+    align-self: center;
+    color: #718a44;
+    text-shadow: 1px 1px 1px rgba(138, 145, 144, 0.5);
+    font-size: 27px;
+}

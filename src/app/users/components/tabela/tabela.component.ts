@@ -26,10 +26,6 @@ export class TabelaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getToken().subscribe((data) => {
-      this.token += data;
-      console.log(data);
-    });
     this.service.getUsers().subscribe((data) => {
       this.users = data;
     });

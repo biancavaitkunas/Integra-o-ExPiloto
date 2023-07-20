@@ -6,6 +6,8 @@ import { CountriesComponent } from './countries/components/countries/countries.c
 import { TeamsComponent } from './teams/components/teams/teams.component';
 import { ChampionshipComponent } from './championship/components/championship/championship.component';
 import { SpeedwaysComponent } from './speedways/components/speedways/speedways.component';
+import { PilotsComponent } from './pilots/components/pilots/pilots.component';
+import { RacesComponent } from './races/components/races/races.component';
 
 const routes: Routes = [
   {path:"", component: HomePagesComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:"countries", component: CountriesComponent},
   {path:"teams", component: TeamsComponent},
   {path:"championships", component: ChampionshipComponent},
-  {path:"speedways", component: SpeedwaysComponent}
+  {path:"speedways", component: SpeedwaysComponent},
+  {path:"pilots", component: PilotsComponent},
+  {path:"races", component: RacesComponent}
 ];
 
 @NgModule({

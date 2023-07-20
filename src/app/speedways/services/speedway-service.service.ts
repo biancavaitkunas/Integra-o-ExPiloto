@@ -43,7 +43,23 @@ export class SpeedwayServiceService{
   }
 
   getSpeedwaysByName(name: string): Observable<Speedway[]> {
-    let url = `${this.urlBase}/name/${name}`;
+    let url = `${this.urlBase}/nome/${name}`;
+    this.http
+      .get<Speedway[]>(url)
+      .subscribe((speedway) => this.speedwaysSubject.next(speedway));
+    return this.speedwaysSubject.asObservable();
+  }
+
+  getSpeedwaysBySizeBetween(inicialSize: number, finalSize: number): Observable<Speedway[]> {
+    let url = `${this.urlBase}/tamanho/${inicialSize}/${finalSize}`;
+    this.http
+      .get<Speedway[]>(url)
+      .subscribe((speedway) => this.speedwaysSubject.next(speedway));
+    return this.speedwaysSubject.asObservable();
+  }
+
+  getSpeedwaysBySize(size: number): Observable<Speedway[]> {
+    let url = `${this.urlBase}/tamanho/${size}`;
     this.http
       .get<Speedway[]>(url)
       .subscribe((speedway) => this.speedwaysSubject.next(speedway));

@@ -31,6 +31,11 @@ export class FormularioComponent implements OnInit{
     if(this.user.id){
       this.user == this.user;
     }
+    this.limpaCampos();
+  }
+
+  public limpaCampos(){
+    this.user = {id:0,name:'', email:'', password:'',roles:''};
   }
 
   ngOnInit(): void {

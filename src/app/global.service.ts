@@ -11,7 +11,7 @@ export class GlobalService {
 
   public token: string = '';
 
-  public getToken(email: string, senha: string): Observable<void>{
+  public getToken(email: string, senha: string){
     let httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json'}), responseType: 'text' as 'json'
     }
