@@ -31,8 +31,5 @@ export class TabelaComponent implements OnInit {
     this.loginService.getToken('bianca@gmail', 'bianca123').subscribe(()=> {this.service.getUsers().subscribe((data) => {
       this.token += data});
     });
-    /*this.service.getUsers().subscribe((data) => {
-      this.users = data;
-    });*/
   }
 }

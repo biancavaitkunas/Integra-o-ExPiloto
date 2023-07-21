@@ -14,7 +14,7 @@ export class LoginServiceService {
   public getToken(email: string, password: string): Observable<string> {
     let httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
-      responseType: 'text' as 'json',
+      responseType: 'text' as 'json'
     };
     let url = `http://localhost:8080/auth/token`;
     let userLogin = {
