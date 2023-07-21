@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UserLogin } from '../../model/userLogin';
-import { LoginServiceService } from '../../service/login-service.service';
+import { UserLogin } from '../../models/userLogin';
+import { LoginServiceService } from '../../services/login-service.service';
 
 @Component({
   selector: 'app-formulario',
