@@ -1,0 +1,29 @@
+<section class="container">
+
+    <div class="form">
+        <label class="label">E-mail: </label>
+        <div class="name">
+          <input
+            type="text"
+            class="input"
+            placeholder="Digite seu e-mail..."
+            [(ngModel)]="userLogin.email"
+          />
+        </div>
+
+        <label class="label">Senha: </label>
+        <div class="name">
+          <input
+            type="text"
+            class="input"
+            placeholder="Digite a senha..."
+            [(ngModel)]="userLogin.password"
+          />
+        </div>
+      
+        </div>
+      
+        <button class="salvar" (click)="login()">Entrar</button>
+
+
+</section>

@@ -1,0 +1,40 @@
+.container {
+    width: 750px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: "Century Gothic";
+    background-color: #faf6d1;
+    border-radius: 5px;
+    box-shadow: 2px 0px 1.5px 0px #bebbbb;
+    margin-top: 150px;
+    
+}
+
+.linha{
+    background-color: #b5cc8b;
+    height: 1px;
+    width: 700px;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.header{
+    display: flex;
+    margin-left: 13%;
+    margin-top: 20px;
+    
+}
+
+.imagem{
+    width: 70px;
+    height: 70px;
+    margin-right: 90px;
+}
+
+h1{
+    align-self: center;
+    color: #718a44;
+    text-shadow: 1px 1px 1px rgba(138, 145, 144, 0.5);
+    font-size: 27px;
+}

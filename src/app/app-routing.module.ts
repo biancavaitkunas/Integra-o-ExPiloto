@@ -8,9 +8,11 @@ import { ChampionshipComponent } from './championship/components/championship/ch
 import { SpeedwaysComponent } from './speedways/components/speedways/speedways.component';
 import { PilotsComponent } from './pilots/components/pilots/pilots.component';
 import { RacesComponent } from './races/components/races/races.component';
+import { LoginComponent } from './login/components/login/login.component';
 
 const routes: Routes = [
   {path:"", component: HomePagesComponent},
+  {path:"login", component: LoginComponent},
   {path:"users", component: UserComponent},
   {path:"countries", component: CountriesComponent},
   {path:"teams", component: TeamsComponent},

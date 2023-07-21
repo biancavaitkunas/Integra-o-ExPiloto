@@ -15,10 +15,10 @@
             <td>{{pilot.team.name}}</td>
           <td>
             <button class="icone" >
-              <img src="../../../../assets/editar.svg" width="35px" />
+              <img src="../../../../assets/editar.svg" width="35px" (click)="editPilot(pilot)"/>
             </button>
             <button class="icone">
-              <img src="../../../../assets/deletar.svg" width="35px" />
+              <img src="../../../../assets/deletar.svg" width="35px" (click)="deletePilot(pilot)"/>
             </button>
           </td>
         </tr>
